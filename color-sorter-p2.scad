@@ -1,6 +1,6 @@
 // bottom
 difference() {
-    cube([40,24,2],center=true);
+    cube([40,20,2],center=true);
     cube([23.0,12.6,2.2],center=true);
     translate([0,0,0]){
         cube([22.8,12.4,2.2],center=true);
@@ -19,6 +19,7 @@ difference() {
     }
 }
 
+
 // side
 difference() {
     translate([19,0,14]) {
@@ -31,13 +32,17 @@ difference() {
     }  
 }
 
+translate([21,0,4]){
+    cube([2,5.6,10], center=true);
+}
+
 // trangle
-for (y=[-11,11]) {
+for (y=[-9,9]) {
     difference() {
-        translate([0,y,14]){
+        translate([-2,y,14]){
             cube([44,2,30], center=true);
         }
-        translate([-21,0,29]){
+        translate([-23,0,29]){
             rotate([90,0,0]){
                 cylinder(r=39,h=60,center=true,$fn=4);
             }
